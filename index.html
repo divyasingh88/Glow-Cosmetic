@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Cosmetics | Natural Beauty Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">GLOW<span>Cosmetics</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#products">Shop <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#products" data-category="skincare">Skincare</a>
+                        <a href="#products" data-category="makeup">Makeup</a>
+                        <a href="#products" data-category="haircare">Haircare</a>
+                        <a href="#products" data-category="bodycare">Body Care</a>
+                        <a href="#products" data-category="fragrance">Fragrance</a>
+                        <a href="#products" data-category="tools">Tools</a>
+                    </div>
+                </li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="search-box">
+                    <input type="text" placeholder="Search products..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="wishlist-icon" id="wishlistIcon">
+                    <i class="far fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </div>
+                <div class="account-icon" id="accountIcon">
+                    <i class="far fa-user"></i>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-animation"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Natural & Organic</span>
+                <h1>Discover Natural Beauty with GLOW Cosmetics</h1>
+                <p>Handcrafted skincare products made with organic ingredients that nourish your skin and respect our planet.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn">Shop Now</a>
+                    <a href="#about" class="btn secondary-btn">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600" alt="Glow Cosmetics Products">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>100% Natural</h3>
+                    <p>All products made with organic ingredients</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Cruelty Free</h3>
+                    <p>Never tested on animals</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-recycle"></i></div>
+                    <h3>Eco Friendly</h3>
+                    <p>Sustainable packaging & practices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h3>Free Shipping</h3>
+                    <p>On orders over $50</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="skincare">
+                    <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=300" alt="Skincare">
+                    <div class="category-overlay">
+                        <h3>Skincare</h3>
+                        <span>View Collection</span>
+                    </div>
+                </div>
+                <div class="category-card" data-category="makeup">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=300" alt="Makeup">
+                    <div class="category-overlay">
+                        <h3>Makeup</h3>
+                        <span>View Collection</span>
+                    </div>
+                </div>
+                <div class="category-card" data-category="haircare">
+                    <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=300" alt="Haircare">
+                    <div class="category-overlay">
+                        <h3>Haircare</h3>
+                        <span>View Collection</span>
+                    </div>
+                </div>
+                <div class="category-card" data-category="bodycare">
+                    <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=300" alt="Body Care">
+                    <div class="category-overlay">
+                        <h3>Body Care</h3>
+                        <span>View Collection</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600" alt="About Glow Cosmetics">
+                </div>
+                <div class="about-text">
+                    <h2>Creating Beauty Through Nature</h2>
+                    <p>Founded in 2015, GLOW Cosmetics began with a simple mission: to create skincare products that harness the power of nature without compromising on quality or effectiveness.</p>
+                    <p>Every product in our collection is thoughtfully formulated using organic, sustainably sourced ingredients. We believe that what you put on your skin matters, which is why we never use harmful chemicals, parabens, or synthetic fragrances.</p>
+                    <div class="values">
+                        <div class="value-item"><i class="fas fa-check"></i> 100% Cruelty-Free</div>
+                        <div class="value-item"><i class="fas fa-check"></i> Vegan</div>
+                        <div class="value-item"><i class="fas fa-check"></i> Eco-Friendly</div>
+                        <div class="value-item"><i class="fas fa-check"></i> Natural Ingredients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="products-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bestsellers">Bestsellers</button>
+                <button class="filter-btn" data-filter="new">New Arrivals</button>
+                <button class="filter-btn" data-filter="featured">Featured</button>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here with JavaScript -->
+            </div>
+            <div class="products-loading" id="productsLoading">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-container" id="testimonialContainer">
+                    <div class="testimonial">
+                        <div class="testimonial-image">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Customer 1">
+                        </div>
+                        <p class="testimonial-text">"The Rose Glow Serum has transformed my skin! My complexion is brighter and more even-toned after just two weeks of use. I love how it absorbs quickly without feeling greasy."</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="testimonial-author">Emma Johnson</h4>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Customer 2">
+                        </div>
+                        <p class="testimonial-text">"As someone with sensitive skin, I've always struggled to find products that don't cause irritation. GLOW Cosmetics has been a game-changer for me!"</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h4 class="testimonial-author">Michael Chang</h4>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Customer 3">
+                        </div>
+                        <p class="testimonial-text">"I appreciate that GLOW Cosmetics is committed to sustainability. The products are amazing, and knowing that I'm supporting an eco-friendly company makes me feel even better!"</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="testimonial-author">Sophia Rodriguez</h4>
+                    </div>
+                </div>
+                <div class="testimonial-buttons">
+                    <button class="testimonial-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="testimonial-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <h2 class="section-title">Beauty Blog</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400" alt="Blog 1">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Dec 15, 2024</span>
+                        <h3>10 Skincare Tips for Healthy Skin</h3>
+                        <p>Discover the secrets to maintaining radiant, healthy skin with our expert tips.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1570194065650-d99fb4b38b15?w=400" alt="Blog 2">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Dec 10, 2024</span>
+                        <h3>The Benefits of Natural Ingredients</h3>
+                        <p>Learn why natural ingredients are better for your skin and the environment.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400" alt="Blog 3">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Dec 5, 2024</span>
+                        <h3>Building Your Skincare Routine</h3>
+                        <p>A step-by-step guide to creating the perfect skincare routine for your skin type.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get special offers, beauty tips, and updates on new products directly to your inbox.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Beauty Lane, Cosmeticville, CA 90210</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@glowcosmetics.com</li>
+                        <li><i class="fas fa-clock"></i> Monday - Friday: 9am - 6pm</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GLOW Cosmetics</h3>
+                    <p>Natural, organic skincare products that help you glow from the inside out.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get special offers and updates on new products.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" class="newsletter-input">
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GLOW Cosmetics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content auth-modal">
+            <span class="modal-close" data-modal="loginModal">&times;</span>
+            <div class="auth-header">
+                <h2>Welcome Back</h2>
+                <p>Login to your account</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-group remember-me">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn auth-btn">Login</button>
+            </form>
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content auth-modal">
+            <span class="modal-close" data-modal="registerModal">&times;</span>
+            <div class="auth-header">
+                <h2>Create Account</h2>
+                <p>Join GLOW Cosmetics</p>
+            </div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirm Password</label>
+                    <input type="password" id="registerConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn auth-btn">Register</button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content profile-modal">
+            <span class="modal-close" data-modal="profileModal">&times;</span>
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h2 id="profileName">User Name</h2>
+                <p id="profileEmail">user@email.com</p>
+            </div>
+            <div class="profile-menu">
+                <a href="#" class="profile-link"><i class="fas fa-user-circle"></i> My Profile</a>
+                <a href="#" class="profile-link"><i class="fas fa-shopping-bag"></i> My Orders</a>
+                <a href="#" class="profile-link"><i class="fas fa-heart"></i> Wishlist</a>
+                <a href="#" class="profile-link"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" id="logoutBtn" class="profile-link logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <span class="close-cart" id="closeCart">&times;</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <div class="total-row">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal">$0.00</span>
+                </div>
+                <div class="total-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="total-row total">
+                    <span>Total</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3>My Wishlist</h3>
+            <span class="close-wishlist" id="closeWishlist">&times;</span>
+        </div>
+        <div class="wishlist-items" id="wishlistItems">
+            <!-- Wishlist items will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content quick-view-modal">
+            <span class="modal-close" data-modal="quickViewModal">&times;</span>
+            <div class="quick-view-content" id="quickViewContent">
+                <!-- Quick view content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage">Success!</span>
+        </div>
+    </div>
+</body>
+</html>
